@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="dev.roshin.eclipse.git_remote_change_alert.Startup">
+      </startup>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="dev.roshin.eclipse.git_remote_change_alert.preferences.MyPreferencePage"
+            id="dev.roshin.eclipse.git_remote_change_alert.preferences.MyPreferencePage"
+            name="Git Remote Change Alert">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="dev.roshin.eclipse.git_remote_change_alert.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+
+</plugin>
